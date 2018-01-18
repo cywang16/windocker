@@ -1,0 +1,10 @@
+Django
+psycopg2
+beautifulsoup4
+lxml
+Requests
+Flask
+numpy
+pandas
+scipy
+xlrd

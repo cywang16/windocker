@@ -1,0 +1,21 @@
+#
+# [Can't connect to ASP.Net site in Docker for Windows](https://stackoverflow.com/questions/44104705/cant-connect-to-asp-net-site-in-docker-for-windows)
+# need to run directly for network to work: docker run -d -p 80:80 microsoft/iis:nanoserver
+# [Microsoft/iis-docker](https://github.com/Microsoft/iis-docker)
+# MTHFs8pnVNF1-ibGCe6mQvcyjyO8_VxvVCE78FKEjNAXzTau-p43kQ
+# if using this docker-compose, do "docker network inspect nanoiis_default" to get the IPv4Address
+#
+# [artisticcheese/IISadmin](https://github.com/artisticcheese/IISadmin)
+
+version: '3'
+
+services:
+  web:
+    # build: .
+    # image: microsoft/iis
+    image: microsoft/iis:nanoserver
+    volumes:
+      - .:C:\site
+    ports:
+      - "980:80"
+      - "955:55539"

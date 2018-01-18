@@ -1,0 +1,27 @@
+#
+# create django project:
+# docker-compose run web django-admin.py startproject composeexample .
+# sudo chown -R $USER:$USER .
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'HOST': 'db',
+#         'PORT': 5432,
+#     }
+# }
+#
+version: '3'
+
+services:
+  web:
+    build: .
+    # command: python manage.py runserver 0.0.0.0:8000
+    # command: FLASK_APP=/code/hello.py flask run
+    # command: python c:\\code\\hello.py
+    volumes:
+      - .:c:\code
+    ports:
+      - "900:8000"
+      - "1500:5000"

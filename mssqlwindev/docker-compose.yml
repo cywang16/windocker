@@ -1,0 +1,16 @@
+#
+# [microsoft/mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)
+# [SQL Server Blog](https://blogs.technet.microsoft.com/dataplatforminsider/2016/10/13/sql-server-2016-express-edition-in-windows-containers/) for how to connect
+
+version: '3'
+
+services:
+  dev:
+    image: microsoft/mssql-server-windows-developer
+    environment:
+      - sa_password=Msi4ever
+      - ACCEPT_EULA=Y
+    volumes:
+      - .:C:\scratches
+    ports:
+      - "933:1433"
