@@ -11,9 +11,9 @@ version: '3'
 
 services:
   web:
-    # build: .
+    build: .
     # image: microsoft/iis
-    image: microsoft/iis:nanoserver
+    # image: microsoft/iis:nanoserver
     volumes:
       - .:C:\site
     ports:
